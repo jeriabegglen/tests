@@ -5,6 +5,8 @@
  */
 package tests;
 
+import static java.sql.DriverManager.println;
+
 /**
  *
  * @author jeriabegglen
@@ -41,6 +43,19 @@ public class Tests {
         int result = 0;    
         result = int1 / int2;
         return result;
+    }  
+    
+    public String printSomething(){
+        String phrase= "Who do we appreciate?";
+        return phrase;
     }
-
+    
+    public static void main(String[] args) {
+        Tests myTests = new Tests();
+        System.out.println(myTests.add("1", "1"));
+        System.out.println(myTests.subtract("10", "6"));
+        System.out.println(myTests.multiply("2", "3"));
+        System.out.println(myTests.divide("16", "2"));
+        System.out.println(myTests.printSomething());
+    }
 }
